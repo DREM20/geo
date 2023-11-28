@@ -72,7 +72,7 @@ if (empty($_SESSION["id"])) {
 						<a class="dropdown-item" href="servicios.html">Otros</a>
 					</div>
 				</li>
-				<a class="nav-item nav-link text-justify ml-3 hover-primary" href="controller/controlador_cerrar_session.php">Salir</a>
+				<a class="nav-item nav-link text-justify ml-3 hover-primary" href="../../controller/controlador_cerrar_session.php">Salir</a>
 			</div>
 
 		</div>
