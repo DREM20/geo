@@ -6,7 +6,7 @@ body{
     margin-top: 20px;
     color: #000000;
     font-weight: bold;
-    background-color: #6c666c;
+    background-color:#691b31;
   }
   h1{
     font-size: 40px;
@@ -21,14 +21,14 @@ body{
   }
 
   .form-control{
-    color: #6c666c ;
+    color: #691b31 ;
     opacity: 0.5;
-    border-color: #6c666c !important;
+    border-color: #691b31 !important;
   }
   
 
   .Parametros{
-    color: #6c666c;
+    color: #691b31;
     font-weight: bold;
     font-size: 20px;
   
@@ -58,8 +58,8 @@ body{
   }
 
   .btn-p{
-    background-color:#6c666c !important;
-    border-color: #6c666c !important;
+    background-color:#691b31 !important;
+    border-color: #691b31 !important;
     
   }
   .btn-p:hover{

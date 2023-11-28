@@ -53,6 +53,7 @@ if (empty($_SESSION["id"])) {
 <body>
 	<nav class="navbar navbar-dark bg-dark  navbar-expand-md navbar-light bg-light fixed-top">
 		<div class="text-white bg-success p-2">
+		<img src="../../assets/img/avatar.svg" alt="" style="width: 30px; height: 30px;">
 			<?php
 			echo $_SESSION["nombre"] . " " . $_SESSION["apellido"];
 			?>
@@ -60,18 +61,7 @@ if (empty($_SESSION["id"])) {
 		<div class="collapse navbar-collapse" id="navbarTogglerDemo01">
 			<div class="navbar-nav mr-auto">
 				<div class="offset-md-1 mr-auto text-center"></div>
-				<a class="nav-item nav-link text-justify active ml-3 hover-primary" href="../../inicio.php">Inicio</a>
-				<a class="nav-item nav-link text-justify ml-3 hover-primary" href="./pages/mapa/mapa.php">Geolocalizacion</a>
-				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle text-justify ml-3" href="" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						Servicios
-					</a>
-					<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-						<a class="dropdown-item" href="#">Preguntas Frecuentes</a>
-						<a class="dropdown-item" href="#">Compras</a>
-						<a class="dropdown-item" href="servicios.html">Otros</a>
-					</div>
-				</li>
+				<a class="nav-item nav-link text-justify active ml-3 hover-primary" href="../../inicio.php">Regresar</a>
 				<a class="nav-item nav-link text-justify ml-3 hover-primary" href="../../controller/controlador_cerrar_session.php">Salir</a>
 			</div>
 

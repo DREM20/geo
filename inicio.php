@@ -10,7 +10,7 @@ if (empty($_SESSION["id"])) {
 
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>GruasPuebla</title>
 	<link rel="stylesheet" href="assets/css/estilo.css">
 	<link rel="stylesheet" href="assets/css/bootstrap.css">
 	<link rel="stylesheet" href="assets/css/map.css">
@@ -158,6 +158,7 @@ if (empty($_SESSION["id"])) {
 	</script>
 	<nav class="navbar navbar-dark bg-dark  navbar-expand-md navbar-light bg-light fixed-top">
 		<div class="text-white bg-success p-2">
+		<img src="assets/img/avatar.svg" alt="" style="width: 30px; height: 30px;">
 			<?php
 			echo $_SESSION["nombre"] . " " . $_SESSION["apellido"];
 			?>
@@ -167,16 +168,8 @@ if (empty($_SESSION["id"])) {
 				<div class="offset-md-1 mr-auto text-center"></div>
 				<a class="nav-item nav-link text-justify active ml-3 hover-primary" href="../../inicio.php">Inicio</a>
 				<a class="nav-item nav-link text-justify ml-3 hover-primary" href="./pages/mapa/mapa.php">Geolocalizacion</a>
-				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle text-justify ml-3" href="" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						Servicios
-					</a>
-					<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-						<a class="dropdown-item" href="#">Preguntas Frecuentes</a>
-						<a class="dropdown-item" href="#">Compras</a>
-						<a class="dropdown-item" href="servicios.html">Otros</a>
-					</div>
-				</li>
+				<a class="nav-item nav-link text-justify ml-3 hover-primary" href="#Informacion">Informacion</a>
+				<a class="nav-item nav-link text-justify ml-3 hover-primary" href="#Formulario">Formulario</a>
 				<a class="nav-item nav-link text-justify ml-3 hover-primary" href="controller/controlador_cerrar_session.php">Salir</a>
 			</div>
 
@@ -193,25 +186,14 @@ if (empty($_SESSION["id"])) {
 			</ol>
 			<div class="carousel-inner">
 				<div class="carousel-item active" style="height: 80vh">
-					<img src="assets/img/1.jpg" class="d-block w-100" alt="...">
-					<div class="carousel-caption d-none d-md-block">
-						<h5 class="display-4 mb-4 font-weight-bold">BOOTSTRAP 4</h5>
-						<p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-					</div>
+					<img src="assets/img/Banner1.jpg" class="d-block w-100" alt="...">
 				</div>
 				<div class="carousel-item" style="height: 80vh">
-					<img src="assets/img/1.jpg" class="d-block w-100" alt="...">
-					<div class="carousel-caption d-none d-md-block">
-						<h5 class="display-4 mb-4 font-weight-bold">BOOTSTRAP 4</h5>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-					</div>
+					<img src="assets/img/Banner2.jpg" class="d-block w-100" alt="...">
+					
 				</div>
 				<div class="carousel-item" style="height: 80vh">
-					<img src="assets/img/1.jpg" class="d-block w-100" alt="...">
-					<div class="carousel-caption d-none d-md-block">
-						<h5 class="display-4 mb-4 font-weight-bold">BOOTSTRAP 4</h5>
-						<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-					</div>
+					<img src="assets/img/Banner3.jpg" class="d-block w-100" alt="...">
 				</div>
 			</div>
 			<a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
@@ -225,21 +207,32 @@ if (empty($_SESSION["id"])) {
 		</div>
 	</div>
 	<div class="">
-		<div class="jumbotron bg-dark text-light rounded-0">
-			<h1 class="display-4"> Gestión de Grúas del Estado de Puebla</h1>
-			<p class="lead">Acerca de Nosotros</p>
+		<div class="jumbotron bg-dark text-light rounded-0" id="Informacion">
+			<h1 class="display-4">Acerca de Nosotros</h1>
 			<hr class="my-4 bg-light">
 			<div class="d-flex justify-content-between align-items-center flex-wrap">
-				<p>Bienvenidos a [Nombre de tu Empresa de Grúas en Puebla], su socio confiable cuando se trata de servicios de remolque y asistencia en carretera en la hermosa ciudad de Puebla y sus alrededores. Desde [año de fundación], hemos estado comprometidos en brindar soluciones de grúas de alta calidad para satisfacer las necesidades de nuestros clientes, estableciendo un estándar de excelencia en la industria.
-					En [Nombre de tu Empresa], entendemos que las situaciones de emergencia en la carretera pueden ser estresantes y desafiantes, por lo que nos enorgullece ofrecer un servicio rápido, confiable y amigable que puede marcar la diferencia en esos momentos críticos. Nuestro equipo de profesionales altamente capacitados y experimentados está disponible las 24 horas del día, los 7 días de la semana, para brindar asistencia y remolque de vehículos en toda la región de Puebla.</p>
-				<a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+			<h4><b>¿Quienes Somos?</b></h4>
+				<p>Bienvenidos a <b>Gruas de Puebla</b>, su socio confiable cuando se trata de servicios de remolque y asistencia en carretera en la hermosa ciudad de Puebla y sus alrededores. <br>
+					En <b>Gruas de Puebla</b>, entendemos que las situaciones de emergencia en la carretera pueden ser estresantes y desafiantes, por lo que nos enorgullece ofrecer un servicio rápido, confiable y amigable que puede marcar la diferencia en esos momentos críticos. 
+				<h4><b>Compromiso con la Excelencia:</b></h4>
+				<p>Entendemos que las situaciones de emergencia en la carretera pueden ser estresantes y desafiantes. Es por eso que nos comprometemos a brindar un servicio rápido, confiable y amigable que marque la diferencia en esos momentos críticos.</p> 
+				<h4><b>Equipo Profesional las 24/7:</b></h4>
+				<p>Nuestro equipo de profesionales altamente capacitados y experimentados está disponible las 24 horas del día, los 7 días de la semana, listo para ofrecer asistencia y remolque de vehículos en toda la región de Puebla. Ya sea en un día soleado o en medio de la noche, puede confiar en [Nombre de tu Empresa] para estar allí cuando más nos necesite.</p>
+				<h4><b>Nuestros Servicios:</b></h4> <br>
+				<p><b>Asistencia en Carretera: </b>Desde problemas mecánicos hasta pinchazos, estamos aquí para ayudar en cualquier situación en la que se encuentre varado en la carretera.</p>
+				<p><b>Remolque de Vehículos: </b>Contamos con una flota de grúas modernas y bien mantenidas para llevar su vehículo al destino deseado de manera segura y eficiente.</p>
+				<h4><b>Comprometidos con Nuestros Clientes:</b></h4>
+				<p>En <b>Gruas Puebla</b>, cada cliente es especial. Nos esforzamos por superar sus expectativas y proporcionar un servicio que refleje nuestra dedicación a la calidad y la satisfacción del cliente.</p>
+				<h4><b>Contacto:</b></h4>
+				<p>Estamos a solo una llamada de distancia. No importa la hora ni el lugar, <b>Gruas Puebla</b> está aquí para ayudar. ¡Confíe en nosotros para ser su socio confiable en momentos de necesidad en la carretera!</p>
+				<a class="btn btn-primary btn-lg" href="./pages/mapa/mapa.php" role="button">IR AL MAPA</a>
 			</div>
 		</div>
 	</div>
 	<div class="container">
 		<div class="exito"></div>
 		<div>
-			<div class="col-md-12 order-md-1">
+			<div class="col-md-12 order-md-1" id="Formulario">
 				<h4 class="mb-3">Formulario de contacto</h4>
 				<form id="contact">
 					<div class="row">

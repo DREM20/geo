@@ -1,4 +1,4 @@
-
+   
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,11 +17,8 @@
 
 <body>
    <div>
-   <img class="wave" src="assets/img/wave.png">
    <div class="container">
-      <div class="img">
-         <img src="assets/img/grua.svg">
-      </div>
+      
       <div class="login-content">
          <form method="post" action="">
             <img src="assets/img/avatar.svg">
