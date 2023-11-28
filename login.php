@@ -20,7 +20,7 @@
    <img class="wave" src="assets/img/wave.png">
    <div class="container">
       <div class="img">
-         <img src="assets/img/bg.svg">
+         <img src="assets/img/grua.svg">
       </div>
       <div class="login-content">
          <form method="post" action="">
