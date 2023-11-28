@@ -104,7 +104,10 @@ if (empty($_SESSION["id"])) {
 				</div><br>
 				<div class="d-grid gap-2">
 					<button onclick="trazarRuta()" class="btn btn-primary btn-lg btn-dark">Trazar Ruta</button>
+					<button onclick="obtenerUbicacion()" class="btn btn-primary btn-lg btn-dark">Obtener Ubicación</button>
 				</div>
+
+
 			</div>
 		</div>
 		<!-- <label class="Parametros">Origen:</label>

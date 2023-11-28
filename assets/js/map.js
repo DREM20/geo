@@ -116,6 +116,37 @@ function trazarRuta() {
   document.getElementById("origenInput").value = "";
   document.getElementById("destinoInput").value = "Corralón transito estatal";
 }
+function obtenerUbicacion() {
+  // Verifica si el navegador admite la geolocalización
+  if ("geolocation" in navigator) {
+      navigator.geolocation.getCurrentPosition(function(position) {
+          // `position` contiene la información de la ubicación
+          var latitud = position.coords.latitude;
+          var longitud = position.coords.longitude;
+
+          alert("Ubicación obtenida:\nLatitud: " + latitud + "\nLongitud: " + longitud);
+      }, function(error) {
+          // Manejo de errores
+          switch (error.code) {
+              case error.PERMISSION_DENIED:
+                  alert("Permiso denegado para obtener la ubicación.");
+                  break;
+              case error.POSITION_UNAVAILABLE:
+                  alert("Información de ubicación no disponible.");
+                  break;
+              case error.TIMEOUT:
+                  alert("Se ha excedido el tiempo para obtener la ubicación.");
+                  break;
+              case error.UNKNOWN_ERROR:
+                  alert("Se ha producido un error desconocido.");
+                  break;
+          }
+      });
+  } else {
+      alert("Geolocalización no es compatible con este navegador.");
+  }
+}
+
 
 initMap(); //se inicial8iza la funcion
 
