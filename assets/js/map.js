@@ -1,9 +1,15 @@
 let mapa;
-
+var sugerencias = ['Universidad Tecnológica de Puebla', 'Catedral de Puebla', 'Museo del Fuerte de Loreto', 'Fuente de los Frailes', 'Casa de Diego Eduardo', 'casa de Carlos', 'Casa de Arturo Leonel'];
 // Funcion initMap para especificar todas las caracteristicas del mapa y crearlo.
 function initMap() {
+  
   // Arreglo de los lugares que se muestran 
   const lugares = [
+    {
+      nombre: "Corralón transito estatal",
+      latitud: 18.9867349,
+      longitud: -98.238587,
+    },
     {
       nombre: "Universidad Tecnológica de Puebla",
       latitud: 19.058254567837125,
@@ -108,7 +114,60 @@ function trazarRuta() {
     }
   );
   document.getElementById("origenInput").value = "";
-  document.getElementById("destinoInput").value = "";
+  document.getElementById("destinoInput").value = "Corralón transito estatal";
 }
 
 initMap(); //se inicial8iza la funcion
+
+        // Datos de ejemplo (puedes cargarlos desde una fuente externa)
+        
+
+        // Referencias a los elementos del DOM
+        var input = document.getElementById('origenInput');
+        var lista = document.getElementById('autocompleteList');
+
+        // Agrega un evento de entrada para manejar la búsqueda
+        input.addEventListener('input', function() {
+            var filtro = input.value.toLowerCase();
+            var sugerenciasFiltradas = sugerencias.filter(function(sugerencia) {
+                return sugerencia.toLowerCase().includes(filtro);
+            });
+            mostrarSugerencias(sugerenciasFiltradas);
+        });
+
+        // Función para mostrar las sugerencias
+        function mostrarSugerencias(sugerenciasFiltradas) {
+            // Limpia la lista anterior
+            lista.innerHTML = '';
+
+            // Muestra la lista si hay sugerencias
+            if (sugerenciasFiltradas.length > 0) {
+                lista.style.display = 'block';
+
+                // Crea un elemento para cada sugerencia filtrada
+                sugerenciasFiltradas.forEach(function(sugerencia) {
+                    var item = document.createElement('div');
+                    item.className = 'autocomplete-item';
+                    item.textContent = sugerencia;
+
+                    // Agrega un evento de clic para seleccionar la sugerencia
+                    item.addEventListener('click', function() {
+                        input.value = sugerencia;
+                        lista.style.display = 'none';
+                    });
+
+                    // Agrega el elemento a la lista
+                    lista.appendChild(item);
+                });
+            } else {
+                // Oculta la lista si no hay sugerencias
+                lista.style.display = 'none';
+            }
+        }
+
+        // Cierra la lista de sugerencias al hacer clic fuera de ella
+        document.addEventListener('click', function(e) {
+            if (!e.target.closest('.autocomplete-container')) {
+                lista.style.display = 'none';
+            }
+        });
